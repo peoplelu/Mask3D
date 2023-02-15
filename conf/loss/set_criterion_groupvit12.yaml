@@ -1,0 +1,14 @@
+# @package _group_
+_target_: models.criterion_groupvit12.SetCriterion
+num_classes: ${general.num_targets}
+eos_coef: 0.1
+losses:
+  #- "point_sem"
+  - "labels"
+  - "masks"
+  - "boxes"
+num_points: ${matcher.num_points}
+oversample_ratio: 3.0
+importance_sample_ratio: 0.75
+class_weights: -1
+
